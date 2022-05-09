@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+:root {
+  --bgColor: #183d47;
+  --noteHeaderColor: #54416d;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  gap: 35px;
+  flex-flow: row wrap;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bgColor);
+  color: white;
+  padding: 50px;
+}
+
+.note {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.noteHeader {
+  background-color: var(--noteHeaderColor);
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+textarea {
+  resize: none;
+  border: none;
+  padding: 0.73rem;
+  font-size: 1.77rem;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea.notEditable {
+  cursor: default;
+}
+
+i {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+i + i {
+  margin: 0 20px 0 14px;
+}
+
+.btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  padding: 1.5rem;
+  background-color: var(--noteHeaderColor);
+  border: white 2px solid;
+  color: inherit;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
